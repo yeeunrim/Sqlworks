@@ -28,6 +28,7 @@ DROP TABLE DEPARTMENT;
 
 ROLLBACK; --COMMIT 이전에 실행되면 취소됨
 
+--삭제 이상(지식이 참조하고 있으므로 삭제 안됨)
 --자료 삭제(부서번호가 30번인 마케팅팀 삭제)
 DELETE FROM department 
 WHERE deptid = 30;

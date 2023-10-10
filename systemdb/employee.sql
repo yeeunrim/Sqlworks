@@ -12,11 +12,11 @@ CREATE TABLE employee(
 INSERT INTO employee(empid, empname, age, deptid) 
 VALUES (101, '이강인', 23, 10);
 INSERT INTO employee(empid, empname, age, deptid) 
-VALUES (102, '손흥민', 32, 10); --(102, '손흥민', 32, 30); 부모코드가 없어서 외래키 제약조건 위배
+VALUES (102, '손흥민', 32, 10); 
 INSERT INTO employee(empid, empname, deptid) 
 VALUES (103, '황희찬', 20);
 INSERT INTO employee(empid, empname, age, deptid) 
-VALUES (104, '김민재', 28, 20);
+VALUES (104, '김민재', 28, 10); --부모코드가 없어서 외래키 제약조건 위배
 
 --정보 출력
 --1. 사원의 모든 정보 출력 (모든 데이터)
@@ -40,6 +40,18 @@ WHERE deptid = 20 ;
 --나이가 입력되지 않은 사원 검색
 SELECT * FROM employee
 WHERE age IS NULL;
+
+--문자열 검색(사원이름에서 '민'을 포함하는 사원 검색)
+SELECT * FROM employee
+WHERE empname LIKE '%민%';
+
+--문자열 검색(사원이름에서 '민'을 포함하고, 나이가 30살 이상인 사원 검색)
+SELECT * FROM employee
+WHERE empname LIKE '%민%' AND age >= 30;
+
+--문자열 검색(사원이름에서 '민'을 포함하거나 나이가 저장되지 않은 사원 검색)
+SELECT * FROM employee
+WHERE empname LIKE '%민%' OR age IS NULL;
 
 COMMIT;
 
