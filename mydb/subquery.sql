@@ -1,6 +1,5 @@
 --서브 쿼리(Sub Query) : 부서질의 (중첩 쿼리)
 
-
 --도서 중 가격이 가장 높은 도서 검색
 --MAX(PRICE)
 SELECT MAX(price) FROM book;
