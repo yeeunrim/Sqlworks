@@ -17,6 +17,15 @@ COMMIT;
 
 SELECT * FROM emp;
 
+--급여가 가장 많은 사원을 검색
+--서브쿼리(subquery), 중첩쿼리
+--최고급여 검색 : SELECT MAX(salary) FROM emp;
+--최저급여 검색 : SELECT MIN(salary) FROM emp;
+SELECT ename, salary
+FROM emp
+WHERE salary = (SELECT MAX(salary) FROM emp)
+   OR salary = (SELECT MIN(salary) FROM emp);
+
 --실습 문제 풀이
 --1.사원을 입사일 순으로 정렬(오름차순)
 SELECT *

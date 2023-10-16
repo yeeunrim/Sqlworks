@@ -2,8 +2,13 @@
 --동등조인(equi) : 조인 조건이 정확히 일치하는 경우에 결과 출력
 --외부조인(outer) : 조인 조건이 정확히 일치하지 않아도 모든 결과를 출력
 
+SELECT * FROM book;
+SELECT * FROM customer;
+SELECT * FROM orders;
+
 --고객(customer)과 고객의 주문(orders)에 관한 데이터를 모두 검색
 --고객이름으로 정렬(자동으로 그룹화 됨)
+--카테시안곱 : customer(5) X orders(10) = 60
 SELECT cus.name, ord.saleprice
 FROM customer cus, orders ord
 WHERE  cus.cusid = ord.cusid
@@ -46,7 +51,7 @@ WHERE cus.cusid = ord.cusid AND bk.bookid = ord.bookid;
 --고객(customer)과 고객의 주문(orders)에 관한 데이터 중 
 --고객의 이름과 고객이 주문한 도서의 판매가격 검색
 SELECT cus.name, ord.saleprice
-FROM customer cus INNER JOIN orders ord
+FROM customer cus INNER JOIN orders ord --INNER는 생략 가능
     ON cus.cusid = ord.cusid
 ORDER BY cus.name;
 
@@ -58,4 +63,3 @@ SELECT cus.name, ord.saleprice
 FROM customer cus LEFT OUTER JOIN orders ord
     ON cus.cusid = ord.cusid
 ORDER BY cus.name;
-    
