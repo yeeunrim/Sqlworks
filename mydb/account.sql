@@ -7,6 +7,9 @@ CREATE TABLE account(
 
 INSERT INTO account VALUES ('11-11-111', '임예은', 10000);
 
+UPDATE account SET balance = 40000 WHERE ano = '44-44-4444';
+ROLLBACK;
+
 COMMIT;
 
 SELECT * FROM account;
