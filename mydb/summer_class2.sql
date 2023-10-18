@@ -1,6 +1,6 @@
 --수강료 테이블
 CREATE TABLE summer_price(
-    subject VARCHAR2(20),
+    subject VARCHAR2(20) PRIMARY KEY,
     price NUMBER
 );
 
@@ -11,8 +11,12 @@ INSERT INTO summer_price VALUES ('Python', 40000);
 --여름학기 등록 테이블
 CREATE TABLE summer_register(
     sid NUMBER,
-    subject VARCHAR2(20)
+    subject VARCHAR2(20),
+    FOREIGN KEY(subject) REFERENCES summer_price(subject)
 );
+
+DROP TABLE summer_price;
+DROP TABLE summer_register;
 
 INSERT INTO summer_register VALUES (100, 'C');
 INSERT INTO summer_register VALUES (101, 'Java');
