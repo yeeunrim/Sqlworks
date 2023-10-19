@@ -10,6 +10,8 @@ CREATE TABLE board(
 --시퀀스 생성
 CREATE SEQUENCE seq NOCACHE;
 
+DROP SEQUENCE seq;
+
 --게시글 추가
 INSERT INTO board(bno, btitle, bcontent, bwriter) 
 VALUES (seq.NEXTVAL, '가입인사', '안녕하세요~ 만나서 반갑습니다.', 'today10');
