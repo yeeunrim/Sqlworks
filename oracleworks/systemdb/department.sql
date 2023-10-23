@@ -34,4 +34,3 @@ DELETE FROM department
 WHERE deptid = 30;
 
 COMMIT;
-

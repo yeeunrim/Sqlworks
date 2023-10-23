@@ -1,5 +1,5 @@
--- 스키마:system
---00 테이블
+--스키마:system
+--ex1 테이블
 CREATE TABLE ex1 (
     column1 CHAR(10), --고정길이 문자(10byte)
     column2 VARCHAR2(10) --가변길이 문자(10byte)

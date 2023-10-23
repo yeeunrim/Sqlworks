@@ -11,7 +11,8 @@ CREATE TABLE news(
 
 INSERT INTO news(title, content, img) VALUES ('경제 뉴스', '휘발유 값이 너무 올랐습니다.', 'car.jpg');
 INSERT INTO news(title, content, img) VALUES ('정치 뉴스', '이스라엘과 팔레스타인 전쟁', 'war.JpG');
-INSERT INTO news(title, content, imgg) VALUES ('스포츠 뉴스', '한국과 베트남 축구 성적 - 6:0', 'sOCCEr.jpg');
+INSERT INTO news(title, content, img) VALUES ('스포츠 뉴스', '한국과 베트남 축구 성적 - 6:0', 'soccer.jpg');
+INSERT INTO news(title, content, img) VALUES ('과학 뉴스', '협동 로봇, 청소 서비스 로봇', 'robot.png');
 
 SELECT * FROM news;
 
