@@ -1,3 +1,5 @@
+SELECT * FROM emp;
+
 --조건에 관련 함수
 --DECODE(칼럼명, 조건, 참인값, 거짓인값)
 --성별이 남자이면 'M', 여자이면 'F'로 출력
@@ -18,7 +20,7 @@ SELECT ename 사원이름, gender 성별,
        CASE
           WHEN gender ='남자' THEN 'M'
           ELSE 'F'
-        END gender
+       END gender
 FROM emp;
 
 --급여에 따른 직급 표시
