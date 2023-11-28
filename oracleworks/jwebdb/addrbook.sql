@@ -26,3 +26,11 @@ SELECT * FROM addrbook;
 -- 이메일 yeeun@naver.com 찾기
 SELECT email FROM addrbook
 WHERE email = 'yeeun@naver.com';
+
+-- 주소 삭제
+DELETE FROM addrbook WHERE bnum = 2;
+
+-- 주소 수정
+UPDATE addrbook 
+SET username = 'Lia', tel = 010-1234-5678, gender = 'male'
+WHERE bnum = 2;
