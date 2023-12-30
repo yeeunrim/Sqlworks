@@ -11,7 +11,9 @@ create table boards(
     boardtitle   varchar(100) not null,
     boardwriter  varchar(20) not null,
     boardcontent text not null,
-    createtime   datetime default now()
+    hit          int default 0,
+    createdtime  datetime default now(),
+    updatedtime  datetime
 );
 
 select * from boards;
