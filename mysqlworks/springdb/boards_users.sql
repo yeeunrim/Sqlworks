@@ -37,6 +37,9 @@ create table reply(
     foreign key(boardid) references boards(id) on delete cascade
 );
 
+-- delete
+delete from reply where id = 4;
+
 -- select
 select * from users;
 select * from boards;
